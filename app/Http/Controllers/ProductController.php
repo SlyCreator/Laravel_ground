@@ -102,4 +102,9 @@ class ProductController extends Controller
         return redirect()->route('products.index')
                                 ->with('success','Data successfully deleted');
     }
+
+    public function image_upload(Request $request)
+    {
+       $cover = $request->file('');
+    }
 }

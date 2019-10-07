@@ -16,17 +16,18 @@ class PhoneController extends Controller
     }
     public function phone_create()
     {
-        // $user = User::find(1);
-        // $phone = new Phone;
-        // $phone->phone = '9429343852';
-        // $user->phone()->save($phone);
-
         $user = User::find(1);
         $phone = new Phone;
-        $phone->phone = 'papapa';
+        $phone->phone = '9429343852';
         $user->phone()->save($phone);
+        return response()->json($phone);
+
+        // $user = User::find(1);
+        // $phone = new Phone;
+        // $phone->phone = 'papapa';
+        // $user->phone()->save($phone);
         
-        return response()->json($user);
+        // return response()->json($user);
     }
 
 }

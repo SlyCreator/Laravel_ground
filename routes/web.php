@@ -18,3 +18,18 @@ Route::get('/', function () {
 /*Laravel Crud app */
 Route::resource('products','ProductController');
 
+Route::get('/video', 'OnemorphismController@show_video')->name('video.show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+    /**Image upload */
+Route::get('/image/create', function()
+    {
+        return view('image_test.insert');
+    });
+
+Route::get('test-email', 'JobController@processQueue');
+
+Route::resource('/photos','PhotoController');
